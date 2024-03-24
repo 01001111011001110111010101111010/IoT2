@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block title %}home{% endblock %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Forside</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .headline {
+            font-size: 36px;
+            color: #ffffff;
+            margin-top: 50px;
+        }
+        .text-boxes {
+            display: flex;
+            justify-content: center;
+            align-items: stretch; /* For at sikre at tekstboksene udvides til samme højde */
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .text-box {
+            width: 300px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .text-box h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .text-box p {
+            font-size: 16px;
+            color: #666;
+            flex-grow: 1; /* For at sikre, at teksten fylder resten af pladsen */
+        }
+    </style>
+</head>
+<body>
+    <div class="headline">
+        <h1>Temp Master - fredet bygningers fremtid</h1>
+    </div>
+    <div class="text-boxes">
+        <div class="text-box">
+            <h2>Klimakrisen</h2>
+            <p>I Danmark er der 7000 fredede bygninger. I en tid hvor strømbesparelse og energiforbrug er højt på agendaen i forhold til klimakrisen, så har Temp Master en ny løsning!</p>
+        </div>
+        <div class="text-box">
+            <h2>Løsningen</h2>
+            <p>Vi har her i Temp Master lavet en anordning der kan styre jeres gamle radiatorer. Tryk blot på Konfiguration for at styre din radiator! Klik på Temperatur for diagrammer!</p>
+        </div>
+        <div class="text-box">
+            <h2>Hvem er vi?</h2>
+            <p>Vi er tre studerende på KEA. Oliver Christiansen, Sebastian Ravn og Oguz Apak. Tre personer med store visioner</p>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

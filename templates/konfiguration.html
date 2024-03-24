@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block title %}home{% endblock %}
+{% block content %}
+<head>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: azure;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .btn-box {
+            margin: 10px;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 8px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-5px);
+        }
+        .textbox {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 250px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Konfiguration</h1>
+        <div class="btn-container">
+            <div class="btn-box">
+                <form action="/auto/" method="POST">
+                    <button class="btn" style="background-color: azure; color: black;">Auto</button>
+                </form>
+                <div class="textbox">
+                    <p>Automatisk håndtering af termostaten på baggrund af din temperatur i rummet</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn-container">
+            <div class="btn-box">
+                <form action="/knap_0/" method="POST">
+                    <button class="btn" style="background-color: midnightblue; color: azure;">Sluk</button>
+                </form>
+                <div class="textbox">
+                    <p>Her kan du slukke din termostat</p>
+                </div>
+            </div>
+            <div class="btn-box">
+                <form action="/knap_1/" method="POST">
+                    <button class="btn" style="background-color: lightpink; color: black;">1</button>
+                </form>
+                <div class="textbox">
+                    <p>Her kan du skrue op til termostat niveau 1</p>
+                </div>
+            </div>
+            <div class="btn-box">
+                <form action="/knap_2/" method="POST">
+                    <button class="btn" style="background-color: lightcoral; color: black;">2</button>
+                </form>
+                <div class="textbox">
+                    <p>Her kan du skrue op til termostat niveau 2</p>
+                </div>
+            </div>
+            <div class="btn-box">
+                <form action="/knap_3/" method="POST">
+                    <button class="btn" style="background-color: rgb(214, 79, 79); color: black;">3</button>
+                </form>
+                <div class="textbox">
+                    <p>Her kan du skrue op til termostat niveau 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
